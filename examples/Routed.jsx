@@ -26,7 +26,7 @@ const Routed = () => (
     render={({ history, match: { url } }) => (
       <Wizard history={history} basename={url}>
         <Steps>
-          <Step path="merlin">
+          <Step path="merlin/1">
             <Merlin />
             <Navigation>
               <Next label="Continue" />
