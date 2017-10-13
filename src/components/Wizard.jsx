@@ -42,11 +42,7 @@ class Wizard extends Component {
 
   componentWillMount() {
     this.unlisten = this.history.listen(({ pathname }) => {
-      const path = pathname
-        .split('/')
-        .splice(2)
-        .join('/');
-      const step = this.steps.filter(s => s.path === path)[0];
+      const step = this.steps.filter(s => pathname.includes(s.path))[0];
       if (step) {
         this.setState({
           step,
